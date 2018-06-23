@@ -1,0 +1,9 @@
+{% if account_list %}
+    <ul>
+    {% for account in account_list %}
+        <li><a href="/accounts/{{ account.id }}/">{{ "Name: " + account.first_name + " " + account.last_name + " | School: " + account.school }}</a></li>
+    {% endfor %}
+    </ul>
+{% else %}
+    <p>No accounts have been registered.</p>
+{% endif %}

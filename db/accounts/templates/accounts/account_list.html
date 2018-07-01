@@ -1,0 +1,12 @@
+{% extends 'base_layout.html' %}
+
+{% block content %}
+    <h1>Account Listing</h1>
+    <div class="accounts">
+      {% for account in accounts %}
+        <div class="account">
+          <p><a href="{% url 'accounts:detail' slug=account.slug %}">{{ account }}</a></p>
+        </div>
+      {% endfor %}
+    </div>
+{% endblock %}

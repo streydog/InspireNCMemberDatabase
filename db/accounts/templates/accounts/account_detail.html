@@ -1,0 +1,11 @@
+{% extends 'base_layout.html' %}
+
+{% block content %}
+<div class="account-detail">
+  <div class="account">
+    <h2>User: {{ account }}</h2>
+    <p>First: {{ account.first_name }}</p>
+    <p>Last: {{ account.last_name }}</p>
+  </div>
+</div>
+{% endblock %}
